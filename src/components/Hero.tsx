@@ -44,7 +44,7 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="text-xl text-muted-foreground"
             >
-              B.Tech CSE Graduate
+              Computer Science Engineering Graduate
             </motion.p>
 
             <TypewriterEffect />

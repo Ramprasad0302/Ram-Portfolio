@@ -44,7 +44,7 @@ const academicProjects = [
 
 export function Projects() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [selectedProject, setSelectedProject] = useState<typeof primaryProjects[0] | null>(null);
 
   return (

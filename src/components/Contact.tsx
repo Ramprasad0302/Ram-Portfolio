@@ -49,7 +49,7 @@ const socials = [
 
 export function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <section id="contact" className="py-20 px-4 relative" ref={ref}>
