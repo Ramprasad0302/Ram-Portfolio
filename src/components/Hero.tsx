@@ -34,7 +34,7 @@ export function Hero() {
             >
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Hi — I'm{" "}
-                <span className="text-gradient">Dola Ram Prasad</span>
+                <span className="text-gradient">Ram Prasad</span>
               </h1>
             </motion.div>
 
@@ -69,7 +69,7 @@ export function Hero() {
                 asChild
                 className="glass border-primary/50 hover:border-primary"
               >
-                <a href="/resume.pdf" download>
+                <a href="/resume.pdf" download="Ram_Prasad_Resume.pdf">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
@@ -84,7 +84,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-sm mx-auto">
               {/* Glow effect behind image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-3xl blur-2xl opacity-30 animate-glow-pulse" />
               
@@ -92,7 +92,7 @@ export function Hero() {
               <div className="relative glass rounded-3xl overflow-hidden border-2 border-primary/30">
                 <img
                   src={profileImage}
-                  alt="Dola Ram Prasad"
+                  alt="Ram Prasad"
                   className="w-full h-auto object-cover"
                 />
               </div>

@@ -42,7 +42,7 @@ const socials = [
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/starboyy_46?igsh=MWI2ZGFrYzVtZTdheQ==",
+    href: "https://www.instagram.com/starboyy_46",
     gradient: "from-pink-500 to-purple-600",
   },
 ];
