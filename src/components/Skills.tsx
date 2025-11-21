@@ -45,7 +45,7 @@ const skills = [
 
 export function Skills() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <section id="skills" className="py-20 px-4 relative" ref={ref}>

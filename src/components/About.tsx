@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const certifications = [
     "Infosys Data Science Certificate",
@@ -23,9 +23,9 @@ export function About() {
     <section id="about" className="py-20 px-4 relative" ref={ref}>
       <div className="container max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 50, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             About <span className="text-gradient">Me</span>
@@ -37,9 +37,9 @@ export function About() {
 
         {/* Summary */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0, y: 30, rotateX: -10 }}
+          animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
         >
           <Card className="glass p-8 mb-8">
             <p className="text-lg leading-relaxed text-foreground/90">
@@ -51,9 +51,9 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Education */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={{ opacity: 0, x: -50, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
           >
             <Card className="glass p-6 h-full">
               <div className="flex items-center gap-3 mb-4">
@@ -98,9 +98,9 @@ export function About() {
 
           {/* Certifications */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 80 }}
           >
             <Card className="glass p-6 h-full">
               <div className="flex items-center gap-3 mb-4">
