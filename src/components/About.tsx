@@ -12,8 +12,11 @@ export function About() {
   const certifications = [
     "Infosys Data Science Certificate",
     "Infosys Java Certificate",
-    "Xakal Technical Skill Certification",
+    "Infosys Introduction to Artificial Intelligence Certificate",
+    "Infosys Database Management Certificate",
     "Deloitte Data Analytics Certificate",
+    "Deloitte Technology Job Simulation Certificate",
+    "Deloitte Cyber Job Simulation Certificate",
   ];
 
   return (
@@ -85,7 +88,7 @@ export function About() {
                 className="w-full mt-6 glass border-primary/50"
                 asChild
               >
-                <a href="/resume.pdf" download>
+                <a href="/resume.pdf" download="Ram_Prasad_Resume.pdf">
                   <Download className="mr-2 h-4 w-4" />
                   Download Full Resume
                 </a>
