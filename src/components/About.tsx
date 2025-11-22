@@ -87,7 +87,7 @@ export function About() {
               <div className="space-y-4">
                 <div className="border-l-2 border-primary pl-4 py-2">
                   <h4 className="font-semibold text-lg">B.Tech - Computer Science Engineering</h4>
-                  <p className="text-muted-foreground">Dr. MGR Educational and Research Institute</p>
+                  <p className="text-muted-foreground">Dr. MGR Educational and Research Institute, Chennai</p>
                   <p className="text-primary font-semibold">CGPA: 7.5</p>
                 </div>
                 
