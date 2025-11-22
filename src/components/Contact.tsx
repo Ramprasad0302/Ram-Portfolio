@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Tanuku, West Godavari, Andhra Pradesh - 534211",
+    value: "Hulimavu, Bengaluru, Karnataka - 560076",
     href: null,
   },
 ];
