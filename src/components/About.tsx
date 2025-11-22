@@ -10,13 +10,34 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const certifications = [
-    "Infosys Data Science Certificate",
-    "Infosys Java Certificate",
-    "Infosys Introduction to Artificial Intelligence Certificate",
-    "Infosys Database Management Certificate",
-    "Deloitte Data Analytics Certificate",
-    "Deloitte Technology Job Simulation Certificate",
-    "Deloitte Cyber Job Simulation Certificate",
+    {
+      name: "Infosys Data Science Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_datascience-learningjourney-professionaldevelopment-activity-7342612667179667456-x84X?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      name: "Infosys Java Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_java-upskilling-careergrowth-activity-7342787412051300353-4YpU?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      name: "Infosys Introduction to Artificial Intelligence Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_introduction-to-artificial-intelligence-activity-7398036876785528832-BALl?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      name: "Infosys Database Management Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_database-management-activity-7398037637376299009-XiU4?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      name: "Deloitte Data Analytics Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_forage-certificate-activity-7342600558920286208-iCqD?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      name: "Deloitte Technology Job Simulation Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_forage-certificate-activity-7345106265246744576-SoKw?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      name: "Deloitte Cyber Job Simulation Certificate",
+      url: "https://www.linkedin.com/posts/ram-prasad-16b0b119b_forage-certificate-activity-7345106669938331650-gS3-?utm_source=share&utm_medium=member_desktop"
+    },
   ];
 
   return (
@@ -113,14 +134,20 @@ export function About() {
               <div className="space-y-3">
                 {certifications.map((cert, index) => (
                   <motion.div
-                    key={cert}
+                    key={cert.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                    className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group"
                   >
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-br from-primary to-accent mt-2 group-hover:scale-150 transition-transform" />
-                    <p className="text-foreground/90 leading-relaxed">{cert}</p>
+                    <a
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/10 transition-colors group"
+                    >
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-br from-primary to-accent mt-2 group-hover:scale-150 transition-transform" />
+                      <p className="text-foreground/90 leading-relaxed group-hover:text-primary transition-colors">{cert.name}</p>
+                    </a>
                   </motion.div>
                 ))}
               </div>
