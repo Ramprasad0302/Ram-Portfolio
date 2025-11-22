@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Hulimavu, Bengaluru, Karnataka - 560076",
+    value: "Tanuku, West Godavari, Andhra Pradesh - 534211",
     href: null,
   },
 ];
@@ -74,7 +74,7 @@ export function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="glass p-8 h-full">
+            <Card className="glass-enhanced p-8 h-full holographic">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => {
@@ -124,7 +124,7 @@ export function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Card className="glass p-8 h-full">
+            <Card className="glass-enhanced p-8 h-full holographic">
               <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
               <div className="space-y-4">
                 {socials.map((social, index) => {
@@ -173,7 +173,7 @@ export function Contact() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <Card className="glass p-8 inline-block">
+          <Card className="glass-enhanced p-8 inline-block holographic">
             <p className="text-lg mb-4">
               Ready to work together?
             </p>

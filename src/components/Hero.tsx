@@ -11,12 +11,15 @@ export function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20">
+      {/* Cyber grid background */}
+      <div className="absolute inset-0 cyber-grid opacity-30" />
+      
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 animate-fade-in" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-glow-pulse" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "1s" }} />
+      {/* Decorative elements with enhanced glow */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-cyber-glow" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-cyber-glow" style={{ animationDelay: "1s" }} />
 
       <div className="container max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -34,7 +37,7 @@ export function Hero() {
             >
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Hi — I'm{" "}
-                <span className="text-gradient">Ram Prasad</span>
+                <span className="text-gradient-neon">Ram Prasad</span>
               </h1>
             </motion.div>
 
@@ -58,7 +61,7 @@ export function Hero() {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("projects")}
-                className="glow group"
+                className="glow-neon group"
               >
                 View Projects
                 <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
@@ -84,12 +87,12 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full max-w-sm mx-auto">
+            <div className="relative w-full max-w-sm mx-auto floating">
               {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-3xl blur-2xl opacity-30 animate-glow-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-3xl blur-2xl opacity-30 animate-cyber-glow" />
               
               {/* Image container */}
-              <div className="relative glass rounded-3xl overflow-hidden border-2 border-primary/30">
+              <div className="relative glass-enhanced rounded-3xl overflow-hidden border-2 border-primary/30 holographic">
                 <img
                   src={profileImage}
                   alt="Ram Prasad"

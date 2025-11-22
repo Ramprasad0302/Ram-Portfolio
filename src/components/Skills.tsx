@@ -73,7 +73,7 @@ export function Skills() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 * groupIndex }}
               >
-                <Card className="glass p-6 h-full">
+                <Card className="glass-enhanced p-6 h-full holographic">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                       <Icon className="h-6 w-6 text-white" />
@@ -126,7 +126,7 @@ export function Skills() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12"
         >
-          <Card className="glass p-8 text-center">
+          <Card className="glass-enhanced p-8 text-center holographic">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Database className="h-8 w-8 text-primary" />
               <h3 className="text-2xl font-bold">Currently Learning</h3>

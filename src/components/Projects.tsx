@@ -74,7 +74,7 @@ export function Projects() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               >
-                <Card className="glass p-6 h-full group hover:scale-[1.02] transition-all duration-300 cursor-pointer relative overflow-hidden">
+                <Card className="glass-enhanced p-6 h-full group hover:scale-[1.02] transition-all duration-300 cursor-pointer relative overflow-hidden holographic">
                   {/* Gradient overlay on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                   
@@ -151,7 +151,7 @@ export function Projects() {
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                 >
-                  <Card className="glass p-5 hover:border-accent/50 transition-all group">
+                  <Card className="glass-enhanced p-5 hover:border-accent/50 transition-all group holographic">
                     <div className="flex gap-4">
                       <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <Icon className="h-6 w-6 text-accent" />
@@ -185,7 +185,7 @@ export function Projects() {
 
       {/* Project Modal */}
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="glass max-w-2xl">
+        <DialogContent className="glass-enhanced max-w-2xl holographic">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-gradient">
               {selectedProject?.title}
