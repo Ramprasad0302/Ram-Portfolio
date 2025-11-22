@@ -62,7 +62,7 @@ export function About() {
           animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
         >
-          <Card className="glass p-8 mb-8">
+          <Card className="glass-enhanced p-8 mb-8 holographic">
             <p className="text-lg leading-relaxed text-foreground/90">
               Motivated and enthusiastic Computer Science Engineering graduate with a strong foundation in programming, AI, IoT, and data science. Adept at learning new technologies rapidly and applying them effectively. Possess hands-on experience through academic projects, with certifications in data science and Java from Infosys. Eager to contribute to innovative projects in the CSE department, bringing strong problem-solving skills, technical knowledge, and a passion for learning.
             </p>
@@ -76,7 +76,7 @@ export function About() {
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
           >
-            <Card className="glass p-6 h-full">
+            <Card className="glass-enhanced p-6 h-full holographic">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
                   <GraduationCap className="h-6 w-6 text-primary" />
@@ -123,7 +123,7 @@ export function About() {
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 80 }}
           >
-            <Card className="glass p-6 h-full">
+            <Card className="glass-enhanced p-6 h-full holographic">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
                   <Award className="h-6 w-6 text-accent" />

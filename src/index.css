@@ -43,6 +43,10 @@ All colors MUST be HSL.
     
     --glass-bg: 0 0% 100% / 0.7;
     --glass-border: 220 20% 88% / 0.3;
+    
+    --neon-cyan: 180 100% 50%;
+    --neon-magenta: 300 100% 50%;
+    --cyber-grid: 220 20% 88% / 0.1;
 
     --sidebar-background: 0 0% 98%;
 
@@ -95,6 +99,10 @@ All colors MUST be HSL.
     
     --glass-bg: 220 28% 12% / 0.7;
     --glass-border: 220 25% 25% / 0.3;
+    
+    --neon-cyan: 180 100% 50%;
+    --neon-magenta: 300 100% 50%;
+    --cyber-grid: 220 25% 25% / 0.15;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -127,15 +135,94 @@ All colors MUST be HSL.
     border: 1px solid hsl(var(--glass-border));
   }
   
+  .glass-enhanced {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: 0 8px 32px hsl(var(--primary) / 0.1);
+  }
+  
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-neon {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-shift 3s ease infinite;
   }
   
   .glow {
     box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
   }
   
+  .glow-neon {
+    box-shadow: 
+      0 0 5px hsl(var(--primary) / 0.5),
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.2);
+  }
+  
   .glow-cta {
     box-shadow: 0 0 20px hsl(var(--cta) / 0.4);
+  }
+  
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(var(--cyber-grid)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--cyber-grid)) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .holographic {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .holographic::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      hsl(var(--primary) / 0.1),
+      transparent
+    );
+    animation: holographic-sweep 3s linear infinite;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes holographic-sweep {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
