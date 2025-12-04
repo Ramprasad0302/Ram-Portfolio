@@ -120,9 +120,11 @@ export function Projects() {
                     <Button
                       variant="outline"
                       className="w-full glass border-primary/50 group-hover:border-primary group-hover:glow"
-                      onClick={() => setSelectedProject(project)}
+                      asChild
                     >
-                      View Case Study
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        View Case Study
+                      </a>
                     </Button>
                   </div>
                 </Card>
